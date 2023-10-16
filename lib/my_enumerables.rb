@@ -9,13 +9,15 @@ end
 class Array
   # pass each item in array as a block argument
   # need to:
-    # set a counter = 0
-    i = 0
+    # i = 0
     # initialize an empty array that will be filled with elements and returned
-    arr = []
+    # arr = []
     # check if Array[counter].nil?
       # if not, Array << element
       # if so, break out completely, return array
         # this would be a proc since we want to return the last element once
         # it's reached.
+  def my_each
+    return self
+  end
 end
