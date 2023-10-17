@@ -18,6 +18,15 @@ class Array
         # this would be a proc since we want to return the last element once
         # it's reached.
   def my_each
-    return self
+    arr = []
+    for i in 0..self.length-1
+      result = yield(self[i])
+      result.nil? ? arr << self[i] : arr << result
+    end
+    return arr
   end
 end
+
+some_array = Array.new([1, 2, 3])
+result = some_array.my_each { |e| }
+p result
